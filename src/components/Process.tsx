@@ -37,9 +37,14 @@ export default function Process() {
           }}
         >
           {/* Steps Container */}
-          <div className="flex flex-col sm:flex-row gap-6 sm:gap-4 lg:gap-[82px] items-center justify-center w-full max-w-[1064px] mx-auto">
+          <div className="flex flex-col sm:flex-row gap-6 sm:gap-4 lg:gap-[82px] items-center justify-center w-full max-w-[1064px] mx-auto relative">
             {steps.map((step, index) => (
-              <div key={index} className={`flex flex-col gap-2 lg:gap-[13px] items-center text-center text-black ${step.width} flex-shrink-0`}>
+              <div key={index} className={`flex flex-col gap-2 lg:gap-[13px] items-center text-center text-black ${step.width} flex-shrink-0 relative`}>
+                {/* Mobile Vertical Line - show between steps except after last */}
+                {index < steps.length - 1 && (
+                  <div className="sm:hidden absolute top-full left-1/2 transform -translate-x-1/2 w-[2px] h-6 bg-[#d4a017]"></div>
+                )}
+                
                 {/* Step Title */}
                 <div className="font-bold text-sm lg:text-[16px] leading-tight lg:leading-[21px] w-full">
                   {step.title}
@@ -66,12 +71,7 @@ export default function Process() {
             </div>
           </div>
           
-          {/* Mobile Progress Dots */}
-          <div className="lg:hidden flex justify-center gap-4 mt-6">
-            {steps.map((_, index) => (
-              <div key={index} className="w-3 h-3 bg-[#d4a017] border border-[#fcfcf7] rounded-full"></div>
-            ))}
-          </div>
+
         </div>
       </div>
     </section>
