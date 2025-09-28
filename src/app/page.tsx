@@ -10,6 +10,7 @@ import {
   Contact, 
   Footer 
 } from '@/components';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -18,6 +19,17 @@ export default function Home() {
       <Hero />
       <Services />
       <About />
+      <section 
+        className='container mx-auto px-10'
+      >
+        <Image
+          src="/images/about2.png"
+          alt="Image"
+          className="w-full h-auto shadow-lg rounded-lg "
+          width={1000}
+          height={500}
+        />
+      </section>
       <WhyChooseUs />
       <Process />
       <Testimonials />

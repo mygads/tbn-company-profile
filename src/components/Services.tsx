@@ -36,7 +36,7 @@ export default function Services() {
 
   return (
     <section id="services" className="py-12 md:py-20 bg-gradient-to-b from-[#7e7e7e] to-[#fcfcf7]">
-      <div className="container mx-auto px-4 md:px-6 lg:px-10">
+      <div className="container mx-auto px-10">
         <div className="mb-8 md:mb-12 text-center md:text-left">
           <div className="bg-[#b96244]/45 inline-flex items-center gap-2 md:gap-3 px-3 md:px-4 py-2 mb-4 rounded-full justify-center md:justify-start">
             <FaTools className="w-4 h-4 md:w-6 md:h-6 text-white" />
