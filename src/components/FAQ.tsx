@@ -1,13 +1,10 @@
 'use client'
 
 import { useState } from 'react'
-import Image from 'next/image'
+import { FaQuestionCircle, FaWhatsapp } from 'react-icons/fa'
+import Link from 'next/link'
 
-const ArrowIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke="#B96244" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-  </svg>
-)
+
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
@@ -15,23 +12,23 @@ export default function FAQ() {
   const faqs = [
     {
       question: "What types of projects do you take on?",
-      answer: "We specialize in bathroom and kitchen renovations, regrouting, fixing leaking showers, waterproofing, and kitchen splashbacks."
+      answer: "We specialize in bathroom and kitchen renovations, regrouting, fixing leaking showers, waterproofing, and kitchen splashbacks. From small repairs to complete renovations, we handle projects of all sizes with the same attention to detail."
     },
     {
       question: "Do you offer free estimates?",
-      answer: ""
+      answer: "Yes, we provide free, no-obligation quotes for all our services. We'll visit your home, assess the project, and provide you with a detailed estimate that covers all aspects of the work."
     },
     {
       question: "How long will my project take?",
-      answer: ""
+      answer: "Project timelines vary depending on the scope of work. A simple regrouting job might take 1-2 days, while a full bathroom renovation could take 1-2 weeks. We'll give you a clear timeline during your consultation."
     },
     {
       question: "Can you help with design ideas?",
-      answer: ""
+      answer: "Absolutely! Our experienced team can provide design suggestions and help you choose the right tiles, colors, and layouts that match your style and budget. We're here to guide you through every decision."
     },
     {
       question: "How do I get started?",
-      answer: ""
+      answer: "Getting started is easy! Simply contact us via phone or WhatsApp, and we'll schedule a free consultation at your convenience. We'll discuss your project, provide expert advice, and give you a detailed quote."
     }
   ]
 
@@ -40,53 +37,81 @@ export default function FAQ() {
   }
 
   return (
-    <section className="py-[94px] bg-white" id="faqs">
-      <div className="container mx-auto px-[135px]">
-        <div className="flex items-start justify-between">
-          {/* Left Column - Title and Description */}
-          <div className="w-[337px] flex flex-col gap-[25px]">
-            <h2 className="text-[72px] font-extrabold leading-none text-[#2e2e2e] font-['League_Spartan']">
+    <section className="py-12 md:py-20 bg-[#fcfcf7]" id="faqs">
+      <div className="container mx-auto px-10">
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 items-start">
+          {/* Left Column - Header + Contact - 1/3 width */}
+          <div className="flex flex-col gap-6 w-full lg:w-1/3 items-center lg:items-start">
+            {/* Badge */}
+            <div className="bg-[#b96244] inline-flex items-center gap-2 md:gap-3 px-3 md:px-4 py-2 rounded-full justify-center lg:justify-start">
+              <FaQuestionCircle className="w-4 h-4 md:w-6 md:h-6 text-white" />
+              <span className="text-white font-bold text-sm md:text-base">FREQUENTLY ASKED</span>
+            </div>
+
+            {/* Main Heading */}
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#222222] font-league-spartan text-center lg:text-left">
               FAQS
             </h2>
-            <p className="text-[20px] font-normal leading-normal text-[#706c61] font-['DM_Sans']">
-              Got questions? Here are some of the most common things homeowners ask before starting a project with us.
+
+            {/* Subtitle */}
+            <p className="text-lg md:text-xl text-[#706c61] text-center lg:text-left">
+              Got questions? Here are some of the most common things <span className="font-bold text-[#b96244]">homeowners ask</span> before starting a project with us.
             </p>
-            <button className="inline-flex items-center gap-[10px] px-[10px] py-[10px] border-[3px] border-[#b96244] rounded-[32px] text-[#2e2e2e] font-['DM_Sans'] text-[20px] font-normal w-fit hover:bg-[#b96244] hover:text-white transition-colors">
-              Contact Us
-              <ArrowIcon />
-            </button>
+
+            {/* Contact Button */}
+            <Link 
+              href="https://wa.me/61424296793?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20tiling%20project" 
+              target="_blank"
+              className="group w-full"
+            >
+              <div className="bg-transparent border-2 border-[#25D366] rounded-full flex items-center justify-center gap-3 px-6 py-3 hover:bg-[#25D366] transition-all duration-300 group-hover:scale-105 group-hover:shadow-lg w-full">
+                <FaWhatsapp className="w-5 h-5 md:w-6 md:h-6 text-[#25D366] group-hover:text-white transition-colors duration-300" />
+                <span className="text-[#2e2e2e] text-base md:text-lg font-medium group-hover:text-white transition-colors duration-300">
+                  Contact Us
+                </span>
+              </div>
+            </Link>
+            
+            {/* Phone Number */}
+            <p className="text-sm md:text-base text-[#706c61] text-center lg:text-left">
+              Call or message us at <span className="font-bold text-[#25D366]">0424 296 793</span>
+            </p>
           </div>
 
-          {/* Right Column - FAQ Items */}
-          <div className="w-[658px] flex flex-col">
+          {/* Right Column - FAQ Items - 2/3 width */}
+          <div className="flex flex-col w-full lg:w-2/3">
             {faqs.map((faq, index) => (
-              <div key={index} className="border-b border-black/8">
+              <div key={index} className="border-b border-[#2e2e2e]/20">
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full py-[20px] flex items-center justify-between text-left group"
+                  className="w-full py-4 md:py-6 flex items-center justify-between text-left group hover:bg-[#f5f5f0] transition-colors duration-300 px-2 rounded-lg"
                 >
-                  <h4 className={`text-[20.2px] font-medium font-['DM_Sans'] leading-[28px] ${
-                    index === 0 ? 'text-[#d4a017]' : 'text-[#212123]'
-                  }`}>
+                  <h4 className={`text-base md:text-lg lg:text-xl font-medium leading-relaxed ${
+                    openIndex === index ? 'text-[#d4a017]' : 'text-[#2e2e2e] group-hover:text-[#b96244]'
+                  } transition-colors duration-300`}>
                     {faq.question}
                   </h4>
-                  <div className="flex items-center justify-center w-[24px] h-[24px]">
+                  <div className="flex items-center justify-center w-6 h-6 ml-4 flex-shrink-0">
                     {/* Plus/Minus Icon */}
-                    <div className="relative">
+                    <div className="relative transform transition-transform duration-300 group-hover:scale-110">
                       {/* Horizontal line */}
-                      <div className="w-[14px] h-[2px] bg-black rounded-[1px]" />
+                      <div className={`w-4 h-0.5 rounded-full transition-colors duration-300 ${
+                        openIndex === index ? 'bg-[#d4a017]' : 'bg-[#2e2e2e] group-hover:bg-[#b96244]'
+                      }`} />
                       {/* Vertical line - only show when closed */}
                       {openIndex !== index && (
-                        <div className="w-[2px] h-[14px] bg-black rounded-[1px] absolute top-[-6px] left-[6px]" />
+                        <div className={`w-0.5 h-4 rounded-full absolute top-[-7.5px] left-[7.5px] transition-colors duration-300 ${
+                          'bg-[#2e2e2e] group-hover:bg-[#b96244]'
+                        }`} />
                       )}
                     </div>
                   </div>
                 </button>
                 
-                {/* Answer - Only show for first item initially */}
+                {/* Answer */}
                 {openIndex === index && faq.answer && (
-                  <div className="pb-[20px]">
-                    <div className="text-[17.1px] font-light leading-[24px] text-[#212123] font-['DM_Sans']">
+                  <div className="pb-4 md:pb-6 px-2 animate-fadeIn">
+                    <div className="text-sm md:text-base leading-relaxed text-[#706c61]">
                       {faq.answer}
                     </div>
                   </div>
