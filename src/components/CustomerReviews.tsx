@@ -107,18 +107,12 @@ export default function CustomerReviews() {
             {/* Review Content */}
             <div className="flex flex-col flex-1 gap-3 px-2">
               {/* Review Text */}
-              <p 
-                className="text-[#fcfcf7] text-[16px] leading-normal font-normal flex-1"
-                style={{ fontFamily: 'DM Sans, sans-serif' }}
-              >
+              <p className="text-[#fcfcf7] text-[16px] leading-normal font-normal flex-1">
                 {review.text}
               </p>
               
               {/* Author */}
-              <p 
-                className="text-[#fcfcf7] text-[16px] font-bold leading-normal mt-auto"
-                style={{ fontFamily: 'DM Sans, sans-serif' }}
-              >
+              <p className="text-[#fcfcf7] text-[16px] font-bold leading-normal mt-auto">
                 {review.author}
               </p>
             </div>

@@ -9,10 +9,7 @@ export default function RatingSummary() {
     <div className="w-full max-w-[868px] mx-auto px-4 py-[45px]">
       {/* Main Heading */}
       <div className="text-center mb-12">
-        <h2 
-          className="text-[72px] font-extrabold text-[#222222] leading-normal"
-          style={{ fontFamily: 'League Spartan, sans-serif' }}
-        >
+        <h2 className="text-[72px] font-extrabold text-[#222222] leading-normal font-league-spartan">
           Rating Summary
         </h2>
       </div>
@@ -30,10 +27,7 @@ export default function RatingSummary() {
             
             {/* Rating Text */}
             <div className="mb-2">
-              <p 
-                className="font-bold leading-normal"
-                style={{ fontFamily: 'DM Sans, sans-serif' }}
-              >
+              <p className="font-bold leading-normal">
                 <span className="text-[#febe05] text-[36px]">4,9</span>
                 <span className="text-[#222222] text-[24px]">/5 Rating</span>
               </p>
@@ -41,10 +35,7 @@ export default function RatingSummary() {
             
             {/* Description */}
             <div className="w-[231px]">
-              <p 
-                className="text-[#706c61] text-[16px] leading-normal font-normal"
-                style={{ fontFamily: 'DM Sans, sans-serif' }}
-              >
+              <p className="text-[#706c61] text-[16px] leading-normal font-normal">
                 We're proud to maintain an average 4.8★ customer rating—thanks to our commitment to clear communication, honest pricing, and quality workmanship.
               </p>
             </div>
@@ -62,10 +53,7 @@ export default function RatingSummary() {
             
             {/* Project Text */}
             <div className="mb-1">
-              <p 
-                className="font-bold leading-normal whitespace-nowrap"
-                style={{ fontFamily: 'DM Sans, sans-serif' }}
-              >
+              <p className="font-bold leading-normal whitespace-nowrap">
                 <span className="text-[#febe05] text-[36px]">100+</span>
                 <span className="text-[#222222] text-[24px]"> Project Done</span>
               </p>
@@ -73,10 +61,7 @@ export default function RatingSummary() {
             
             {/* Description */}
             <div className="w-[231px]">
-              <p 
-                className="text-[#706c61] text-[16px] leading-normal font-normal"
-                style={{ fontFamily: 'DM Sans, sans-serif' }}
-              >
+              <p className="text-[#706c61] text-[16px] leading-normal font-normal">
                 With 100+ completed projects, we've delivered bathroom and kitchen renovations, regrouting, waterproofing, and splashbacks that stand the test of time.
               </p>
             </div>
@@ -94,10 +79,7 @@ export default function RatingSummary() {
             
             {/* Trusted Text */}
             <div className="mb-4">
-              <p 
-                className="font-bold leading-normal"
-                style={{ fontFamily: 'DM Sans, sans-serif' }}
-              >
+              <p className="font-bold leading-normal">
                 <span className="text-[#febe05] text-[36px]">Trusted</span>
                 <span className="text-[#222222] text-[24px]"> By Home Owners</span>
               </p>
@@ -105,10 +87,7 @@ export default function RatingSummary() {
             
             {/* Description */}
             <div className="w-[231px]">
-              <p 
-                className="text-[#706c61] text-[16px] leading-normal font-normal"
-                style={{ fontFamily: 'DM Sans, sans-serif' }}
-              >
+              <p className="text-[#706c61] text-[16px] leading-normal font-normal">
                 Homeowners across the region trust TBN Tiling & Stone for reliable, durable, and stylish results—because we treat every home like our own.
               </p>
             </div>

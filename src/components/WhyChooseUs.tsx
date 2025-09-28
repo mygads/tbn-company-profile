@@ -36,7 +36,7 @@ export default function WhyChooseUs() {
           </div>
 
           {/* Main Heading */}
-          <h2 className="text-[#222222] text-4xl sm:text-5xl lg:text-[72px] font-extrabold leading-tight lg:leading-[66px]">
+          <h2 className="text-[#222222] text-4xl sm:text-5xl lg:text-[72px] font-extrabold leading-tight lg:leading-[66px] font-league-spartan">
             OUR BENEFITS
           </h2>
 

@@ -17,7 +17,7 @@ export default function ReviewHero() {
       
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        <h1 className="font-black text-[72px] leading-normal text-[#fcfcf7] mb-6" style={{ fontFamily: 'League Spartan, sans-serif' }}>
+        <h1 className="font-black text-[72px] leading-normal text-[#fcfcf7] mb-6 font-league-spartan">
           What Our Client Say
         </h1>
         <p className="text-[#fcfcf7] text-lg leading-relaxed">

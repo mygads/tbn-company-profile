@@ -37,7 +37,7 @@ export default function Services() {
             <div className="w-6 h-6 bg-[#d4a017] rounded-full"></div>
             <span className="text-white font-bold">WHAT WE DO</span>
           </div>
-          <h2 className="text-5xl lg:text-7xl font-extrabold text-white mb-8">OUR SERVICES</h2>
+          <h2 className="text-5xl lg:text-7xl font-extrabold text-white mb-8 font-league-spartan">OUR SERVICES</h2>
           <p className="text-xl text-white max-w-2xl">
             We provide <span className="font-bold text-[#2e2e2e]">expert tiling and stonework</span> to bring lasting 
             <span className="font-bold text-[#2e2e2e]"> style</span> and <span className="font-bold text-[#2e2e2e]">durability</span> to your home. 
@@ -63,7 +63,7 @@ export default function Services() {
                 </div>
                 
                 <div className="absolute bottom-0 left-0 right-0 bg-[#2e2e2e] p-6">
-                  <h3 className="text-white font-bold text-lg mb-2">{service.title}</h3>
+                  <h3 className="text-white font-bold text-lg mb-2 font-league-spartan">{service.title}</h3>
                   <p className="text-gray-400 text-sm">{service.description}</p>
                   
                   {/* Arrow icon */}
