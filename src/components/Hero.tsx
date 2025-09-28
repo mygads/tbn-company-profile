@@ -46,24 +46,9 @@ export default function Hero() {
 
           <button
             onClick={() => scrollToSection('services')}
-            className="group inline-flex items-center gap-4 rounded-full border-3 border-[#f2bd3a] bg-white px-7 py-3 font-semibold text-[#2f271c] shadow-[0_16px_32px_rgba(242,189,58,0.25)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_44px_rgba(242,189,58,0.35)]"
+            className="group inline-flex items-center gap-4 rounded-full border-3 border-[#f2bd3a] bg-white px-7 py-2 md:py-3 font-semibold text-[#2f271c] shadow-[0_16px_32px_rgba(242,189,58,0.25)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_44px_rgba(242,189,58,0.35)]"
           >
             <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#f2bd3a] text-[#2f271c] transition group-hover:bg-[#e1a92c]">
-              {/* <svg
-                className="h-5 w-5"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                >
-                <path d="M3 3h7v7H3z" />
-                <path d="M14 3h7v7h-7z" />
-                <path d="M3 14h7v7H3z" />
-                <path d="M14 14h7v7h-7z" />
-                <path d="M12 12l9-9" />
-              </svg> */}
               <FaTools size={20} />
             </span>
             Our Services
