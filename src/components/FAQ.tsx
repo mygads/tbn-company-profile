@@ -3,10 +3,13 @@
 import { useState } from 'react'
 import { FaQuestionCircle, FaWhatsapp } from 'react-icons/fa'
 import Link from 'next/link'
+import Image from 'next/image'
 
+interface FAQProps {
+  bg?: boolean;
+}
 
-
-export default function FAQ() {
+export default function FAQ({ bg = false }: FAQProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   const faqs = [
@@ -37,8 +40,26 @@ export default function FAQ() {
   }
 
   return (
-    <section className="py-12 md:py-20 bg-[#fcfcf7]" id="faqs">
-      <div className="container mx-auto px-10">
+    <section className="relative py-12 md:py-20 overflow-hidden" id="faqs">
+      {/* Background Image - Optional - Full Width */}
+      {bg && (
+        <div className="absolute inset-0 w-full h-full z-0">
+          <Image
+            src="/images/faq-bg.png"
+            alt="FAQ Background"
+            fill
+            className="object-cover"
+            priority={false}
+            sizes="100vw"
+          />
+          {/* Optional overlay for better text readability */}
+          <div className="absolute inset-0 bg-yellow-100/40"></div>
+        </div>
+      )}
+
+      {/* Content with background color when bg is false */}
+      <div className={`relative z-10`}>
+        <div className="container mx-auto px-10">
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 items-start">
           {/* Left Column - Header + Contact - 1/3 width */}
           <div className="flex flex-col gap-6 w-full lg:w-1/3 items-center lg:items-start">
@@ -87,7 +108,7 @@ export default function FAQ() {
                   className="w-full py-4 md:py-6 flex items-center justify-between text-left group hover:bg-[#f5f5f0] transition-colors duration-300 px-2 rounded-lg"
                 >
                   <h4 className={`text-base md:text-lg lg:text-xl font-medium leading-relaxed ${
-                    openIndex === index ? 'text-[#d4a017]' : 'text-[#2e2e2e] group-hover:text-[#b96244]'
+                    openIndex === index ? 'text-black' : 'text-[#2e2e2e] group-hover:text-[#b96244]'
                   } transition-colors duration-300`}>
                     {faq.question}
                   </h4>
@@ -111,7 +132,7 @@ export default function FAQ() {
                 {/* Answer */}
                 {openIndex === index && faq.answer && (
                   <div className="pb-4 md:pb-6 px-2 animate-fadeIn">
-                    <div className="text-sm md:text-base leading-relaxed text-[#706c61]">
+                    <div className="text-sm md:text-base leading-relaxed text-black">
                       {faq.answer}
                     </div>
                   </div>
@@ -120,6 +141,7 @@ export default function FAQ() {
             ))}
           </div>
         </div>
+      </div>
       </div>
     </section>
   )

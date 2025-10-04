@@ -39,8 +39,8 @@ export default function Contact() {
           </Link>
           
           {/* Phone Number */}
-          <p className="text-sm md:text-base text-[#706c61] mt-4 md:mt-6">
-        Call or message us at <span className="font-bold text-[#eeff00]">0424 296 793</span>
+          <p className="text-sm md:text-base text-[#566858] mt-4 md:mt-6">
+        Call or message us at <span className="font-bold text-[#15ff00]">0424 296 793</span>
           </p>
         </div>
       </div>
