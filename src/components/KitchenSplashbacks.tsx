@@ -1,62 +1,64 @@
-'use client'
+'use client';
 
-// Placeholder images for kitchen splashbacks
-const splashbackImage1 = "/api/placeholder/556/276"
-const splashbackImage2 = "/api/placeholder/556/276"
+import Image from 'next/image';
 
 export default function KitchenSplashbacks() {
   return (
-    <section className="bg-[#fcfcf7] px-[134px] py-[85px] min-h-[587px] flex flex-col gap-[23px] items-start justify-center">
-      <div className="flex items-center gap-[88px] w-full max-w-[1177px] mx-auto">
-        {/* Left Content - Heading */}
-        <div className="w-[502px] flex flex-col justify-center">
-          <h2 className="text-[64px] font-black font-['League_Spartan'] leading-normal text-[#222222]">
-            Kitchen Splashbacks
-          </h2>
+    <section className="bg-[#fcfcf7] py-12 md:py-20">
+      <div className="container mx-auto px-10">
+        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16 mb-8 md:mb-12">
+          {/* Left Content - Heading */}
+          <div className="w-full lg:w-1/2 text-center lg:text-left">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold font-league-spartan leading-tight text-[#222222]">
+              Kitchen Splashbacks
+            </h2>
+          </div>
+
+          {/* Right Content - Description */}
+          <div className="w-full lg:w-1/2">
+            <p className="text-lg md:text-xl lg:text-2xl font-normal leading-relaxed text-[#706c61] text-center lg:text-left">
+              <span>Add </span>
+              <span className="font-bold text-[#d4a017]">elegance</span>
+              <span> and practicality to your kitchen. Our </span>
+              <span className="font-bold text-[#d4a017]">splashbacks</span>
+              <span> are </span>
+              <span className="font-bold text-[#d4a017]">stylish</span>
+              <span>, </span>
+              <span className="font-bold text-[#d4a017]">easy</span>
+              <span> to </span>
+              <span className="font-bold text-[#d4a017]">clean</span>
+              <span>, and designed to </span>
+              <span className="font-bold text-[#d4a017]">last</span>
+              <span>.</span>
+            </p>
+          </div>
         </div>
 
-        {/* Right Content - Description */}
-        <div className="w-[526px] flex flex-col justify-center">
-          <p className="text-[24px] font-normal font-['DM_Sans'] leading-normal text-[#706c61]">
-            <span>Add </span>
-            <span className="font-bold text-[#d4a017]">elegance</span>
-            <span> and practicality to your kitchen. Our </span>
-            <span className="font-bold text-[#d4a017]">splashbacks</span>
-            <span> are </span>
-            <span className="font-bold text-[#d4a017]">stylish</span>
-            <span>, </span>
-            <span className="font-bold text-[#d4a017]">easy</span>
-            <span> to </span>
-            <span className="font-bold text-[#d4a017]">clean</span>
-            <span>, and designed to </span>
-            <span className="font-bold text-[#d4a017]">last</span>
-            <span>.</span>
-          </p>
+        {/* Images Section */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 justify-items-center md:justify-items-stretch">
+          {/* Splashback Image 1 */}
+          <div className="w-full max-w-md md:max-w-none">
+            <Image
+              src="/images/kitchensplashbacks1.png"
+              alt="Kitchen Splashback Design 1"
+              width={556}
+              height={276}
+              className="w-full h-auto object-cover rounded-lg md:rounded-xl shadow-lg"
+            />
+          </div>
+
+          {/* Splashback Image 2 */}
+          <div className="w-full max-w-md md:max-w-none">
+            <Image
+              src="/images/kitchensplashbacks2.png"
+              alt="Kitchen Splashback Design 2"
+              width={556}
+              height={276}
+              className="w-full h-auto object-cover rounded-lg md:rounded-xl shadow-lg"
+            />
+          </div>
         </div>
-      </div>
-
-      {/* Images Section */}
-      <div className="flex gap-[65px] items-center w-full max-w-[1177px] mx-auto">
-        {/* Splashback Image 1 */}
-        <div 
-          className="w-[556px] h-[276px] bg-cover bg-no-repeat rounded-lg shadow-[9px_11px_10.8px_0px_rgba(0,0,0,0.25)]"
-          style={{ 
-            backgroundImage: `url('${splashbackImage1}')`,
-            backgroundPosition: '51.38% 92.63%',
-            backgroundSize: '119.25% 154.4%'
-          }}
-        />
-
-        {/* Splashback Image 2 */}
-        <div 
-          className="w-[556px] h-[276px] bg-cover bg-no-repeat rounded-lg shadow-[9px_11px_10.8px_0px_rgba(0,0,0,0.25)]"
-          style={{ 
-            backgroundImage: `url('${splashbackImage2}')`,
-            backgroundPosition: '54.61% 65.84%',
-            backgroundSize: '170.81% 243.63%'
-          }}
-        />
       </div>
     </section>
-  )
+  );
 }
