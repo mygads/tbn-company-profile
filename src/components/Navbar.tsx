@@ -17,6 +17,14 @@ export default function Navbar() {
   // Change navbar style based on scroll position
   const isScrolled = scrollPosition > 50;
 
+  // Helper function to check if current path is active
+  const isActive = (path: string) => {
+    if (path === '/') {
+      return pathname === '/';
+    }
+    return pathname.startsWith(path);
+  };
+
   // Handle navigation - if on home page, scroll to section; otherwise navigate to home
   const handleNavigation = (section: string) => {
     if (pathname === '/') {
@@ -52,66 +60,66 @@ export default function Navbar() {
               <button 
                 onClick={() => handleNavigation('home')}
                 className={`relative px-3 py-2 text-sm font-medium transition-all duration-300 hover:scale-105 ${
-                  pathname === '/' 
+                  isActive('/') 
                     ? 'text-[#d4a017]' 
                     : 'text-white hover:text-[#d4a017]'
                 } group`}
               >
                 Home
                 <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-[#d4a017] transform transition-all duration-300 ${
-                  pathname === '/' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                  isActive('/') ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
                 }`}></span>
               </button>
               <Link 
                 href="/services"
                 className={`relative px-3 py-2 text-sm font-medium transition-all duration-300 hover:scale-105 ${
-                  pathname === '/services' 
+                  isActive('/services') 
                     ? 'text-[#d4a017]' 
                     : 'text-white hover:text-[#d4a017]'
                 } group`}
               >
                 Services
                 <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-[#d4a017] transform transition-all duration-300 ${
-                  pathname === '/services' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                  isActive('/services') ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
                 }`}></span>
               </Link>
               <Link
                 href="/about"
                 className={`relative px-3 py-2 text-sm font-medium transition-all duration-300 hover:scale-105 ${
-                  pathname === '/about' 
+                  isActive('/about') 
                     ? 'text-[#d4a017]' 
                     : 'text-white hover:text-[#d4a017]'
                 } group`}
               >
                 About
                 <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-[#d4a017] transform transition-all duration-300 ${
-                  pathname === '/about' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                  isActive('/about') ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
                 }`}></span>
               </Link>
               <Link
                 href="/gallery"
                 className={`relative px-3 py-2 text-sm font-medium transition-all duration-300 hover:scale-105 ${
-                  pathname === '/gallery' 
+                  isActive('/gallery') 
                     ? 'text-[#d4a017]' 
                     : 'text-white hover:text-[#d4a017]'
                 } group`}
               >
                 Gallery
                 <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-[#d4a017] transform transition-all duration-300 ${
-                  pathname === '/gallery' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                  isActive('/gallery') ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
                 }`}></span>
               </Link>
               <Link
                 href="/review"
                 className={`relative px-3 py-2 text-sm font-medium transition-all duration-300 hover:scale-105 ${
-                  pathname === '/review' 
+                  isActive('/review') 
                     ? 'text-[#d4a017]' 
                     : 'text-white hover:text-[#d4a017]'
                 } group`}
               >
                 Review
                 <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-[#d4a017] transform transition-all duration-300 ${
-                  pathname === '/review' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                  isActive('/review') ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
                 }`}></span>
               </Link>
             </div>
@@ -168,7 +176,7 @@ export default function Navbar() {
                   setIsMenuOpen(false);
                 }}
                 className={`w-full text-left px-4 py-3 rounded-lg text-base font-medium transition-all duration-300 hover:bg-[#d4a017]/10 hover:translate-x-2 ${
-                  pathname === '/' ? 'text-[#d4a017] bg-[#d4a017]/10' : 'text-white hover:text-[#d4a017]'
+                  isActive('/') ? 'text-[#d4a017] bg-[#d4a017]/10' : 'text-white hover:text-[#d4a017]'
                 }`}
               >
                 Home
@@ -177,7 +185,7 @@ export default function Navbar() {
                 href="/services"
                 onClick={() => setIsMenuOpen(false)}
                 className={`block w-full text-left px-4 py-3 rounded-lg text-base font-medium transition-all duration-300 hover:bg-[#d4a017]/10 hover:translate-x-2 ${
-                  pathname === '/services' ? 'text-[#d4a017] bg-[#d4a017]/10' : 'text-white hover:text-[#d4a017]'
+                  isActive('/services') ? 'text-[#d4a017] bg-[#d4a017]/10' : 'text-white hover:text-[#d4a017]'
                 }`}
               >
                 Services
@@ -186,7 +194,7 @@ export default function Navbar() {
                 href="/about"
                 onClick={() => setIsMenuOpen(false)}
                 className={`block w-full text-left px-4 py-3 rounded-lg text-base font-medium transition-all duration-300 hover:bg-[#d4a017]/10 hover:translate-x-2 ${
-                  pathname === '/about' ? 'text-[#d4a017] bg-[#d4a017]/10' : 'text-white hover:text-[#d4a017]'
+                  isActive('/about') ? 'text-[#d4a017] bg-[#d4a017]/10' : 'text-white hover:text-[#d4a017]'
                 }`}
               >
                 About
@@ -195,7 +203,7 @@ export default function Navbar() {
                 href="/gallery"
                 onClick={() => setIsMenuOpen(false)}
                 className={`block w-full text-left px-4 py-3 rounded-lg text-base font-medium transition-all duration-300 hover:bg-[#d4a017]/10 hover:translate-x-2 ${
-                  pathname === '/gallery' ? 'text-[#d4a017] bg-[#d4a017]/10' : 'text-white hover:text-[#d4a017]'
+                  isActive('/gallery') ? 'text-[#d4a017] bg-[#d4a017]/10' : 'text-white hover:text-[#d4a017]'
                 }`}
               >
                 Gallery
@@ -204,7 +212,7 @@ export default function Navbar() {
                 href="/review"
                 onClick={() => setIsMenuOpen(false)}
                 className={`block w-full text-left px-4 py-3 rounded-lg text-base font-medium transition-all duration-300 hover:bg-[#d4a017]/10 hover:translate-x-2 ${
-                  pathname === '/review' ? 'text-[#d4a017] bg-[#d4a017]/10' : 'text-white hover:text-[#d4a017]'
+                  isActive('/review') ? 'text-[#d4a017] bg-[#d4a017]/10' : 'text-white hover:text-[#d4a017]'
                 }`}
               >
                 Review
