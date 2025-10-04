@@ -1,59 +1,61 @@
-'use client'
+'use client';
 
-// Placeholder images for fix leaking showers
-const leakingImage1 = "/api/placeholder/556/276"
-const leakingImage2 = "/api/placeholder/556/276"
+import Image from 'next/image';
 
 export default function FixLeakingShowers() {
   return (
-    <section className="bg-[#fcfcf7] px-[134px] py-[85px] min-h-[587px] flex flex-col gap-[23px] items-start justify-center">
-      <div className="flex items-center gap-[88px] w-full max-w-[1177px] mx-auto">
-        {/* Left Content - Heading */}
-        <div className="w-[502px] flex flex-col justify-center">
-          <h2 className="text-[64px] font-black font-['League_Spartan'] leading-normal text-[#222222]">
-            Fix Leaking Showers
-          </h2>
+    <section className="bg-[#fcfcf7] py-12 md:py-20">
+      <div className="container mx-auto px-10">
+        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16 mb-8 md:mb-12">
+          {/* Left Content - Heading */}
+          <div className="w-full lg:w-1/2 text-center lg:text-left">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold font-league-spartan leading-tight text-[#222222]">
+              Fix Leaking Showers
+            </h2>
+          </div>
+
+          {/* Right Content - Description */}
+          <div className="w-full lg:w-1/2">
+            <p className="text-lg md:text-xl lg:text-2xl font-normal leading-relaxed text-[#706c61] text-center lg:text-left">
+              <span>Prevent water damage and costly </span>
+              <span className="font-bold text-[#d4a017]">repairs</span>
+              <span> with our fast and reliable </span>
+              <span className="font-bold text-[#d4a017]">leaking</span>{' '}
+              <span className="font-bold text-[#d4a017]">shower</span>
+              <span> solutions. We diagnose the problem and </span>
+              <span className="font-bold text-[#d4a017]">fix</span>
+              <span> it </span>
+              <span className="font-bold text-[#d4a017]">properly</span>
+              <span>.</span>
+            </p>
+          </div>
         </div>
 
-        {/* Right Content - Description */}
-        <div className="w-[526px] flex flex-col justify-center">
-          <p className="text-[24px] font-normal font-['DM_Sans'] leading-normal text-[#706c61]">
-            <span>Prevent water damage and costly </span>
-            <span className="font-bold text-[#d4a017]">repairs</span>
-            <span> with our fast and reliable </span>
-            <span className="font-bold text-[#d4a017]">leaking</span>{' '}
-            <span className="font-bold text-[#d4a017]">shower</span>
-            <span> solutions. We diagnose the problem and </span>
-            <span className="font-bold text-[#d4a017]">fix</span>
-            <span> it </span>
-            <span className="font-bold text-[#d4a017]">properly</span>
-            <span>.</span>
-          </p>
+        {/* Images Section */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 justify-items-center md:justify-items-stretch">
+          {/* Image 1 */}
+          <div className="w-full max-w-md md:max-w-none">
+            <Image
+              src="/images/leakingshower1.png"
+              alt="Leaking Shower Diagnosis"
+              width={556}
+              height={276}
+              className="w-full h-auto object-cover rounded-lg md:rounded-xl"
+            />
+          </div>
+
+          {/* Image 2 */}
+          <div className="w-full max-w-md md:max-w-none">
+            <Image
+              src="/images/leakingshower2.png"
+              alt="Shower Repair Solution"
+              width={556}
+              height={276}
+              className="w-full h-auto object-cover rounded-lg md:rounded-xl"
+            />
+          </div>
         </div>
-      </div>
-
-      {/* Images Section */}
-      <div className="flex gap-[65px] items-center w-full max-w-[1177px] mx-auto">
-        {/* Image 1 */}
-        <div 
-          className="w-[556px] h-[276px] bg-cover bg-no-repeat rounded-lg shadow-[9px_11px_10.8px_0px_rgba(0,0,0,0.25)]"
-          style={{ 
-            backgroundImage: `url('${leakingImage1}')`,
-            backgroundPosition: '55.02% 56.14%',
-            backgroundSize: '126.05% 163.19%'
-          }}
-        />
-
-        {/* Image 2 */}
-        <div 
-          className="w-[556px] h-[276px] bg-cover bg-no-repeat rounded-lg shadow-[9px_11px_10.8px_0px_rgba(0,0,0,0.25)]"
-          style={{ 
-            backgroundImage: `url('${leakingImage2}')`,
-            backgroundPosition: '0% -0.65%',
-            backgroundSize: '100% 302.14%'
-          }}
-        />
       </div>
     </section>
-  )
+  );
 }
