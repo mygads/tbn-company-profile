@@ -6,9 +6,8 @@ import FixLeakingShowers from '@/components/FixLeakingShowers'
 import Waterproofing from '@/components/Waterproofing'
 import KitchenSplashbacks from '@/components/KitchenSplashbacks'
 import Footer from '@/components/Footer'
-import { Contact, FAQ, Process } from '@/components'
+import { About, Contact, FAQ, Process } from '@/components'
 import AboutUsHero from '@/components/AboutUsHero'
-import AboutUsDesc from '@/components/AboutUsDesc'
 import OurMissionValues from '@/components/OurMissionValues'
 
 export default function ServicesPage() {
@@ -16,7 +15,7 @@ export default function ServicesPage() {
     <main className='bg-white'>
       <Navbar />
       <AboutUsHero />
-      <AboutUsDesc />
+      <About learn={false} />
       <OurMissionValues />
       <FAQ />
       <Process />

@@ -2,7 +2,11 @@ import { FaArrowAltCircleRight } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function About() {
+interface AboutProps {
+  learn?: boolean;
+}
+
+export default function About({ learn = true }: AboutProps) {
   return (
     <section id="about" className="py-12 md:py-20 bg-[#fcfcf7]">
       <div className="container mx-auto px-10">
@@ -30,13 +34,15 @@ export default function About() {
               </p>
 
               {/* Learn More Button */}
-              <Link href="/about" className="relative w-fit">
-                <div className="bg-transparent border-2 border-[#d4a017] rounded-full flex items-center justify-center px-4 py-2 hover:bg-[#d4a017] transition-colors group">
-                  <span className="text-[#2e2e2e] text-base md:text-lg font-normal group-hover:text-white">
-                    Learn More
-                  </span>
-                </div>
-              </Link>
+              {learn && (
+                <Link href="/about" className="relative w-fit">
+                  <div className="bg-transparent border-2 border-[#d4a017] rounded-full flex items-center justify-center px-4 py-2 hover:bg-[#d4a017] transition-colors group">
+                    <span className="text-[#2e2e2e] text-base md:text-lg font-normal group-hover:text-white">
+                      Learn More
+                    </span>
+                  </div>
+                </Link>
+              )}
 
               {/* About Image */}
               <div className="w-full h-32 lg:h-36 rounded-lg overflow-hidden mt-4">
