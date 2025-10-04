@@ -2,6 +2,41 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import LegalHero from '@/components/LegalHero';
 import LegalContent from '@/components/LegalContent';
+import { AnimatedSection } from '@/components';
+import type { Metadata } from 'next';
+
+const siteUrl = 'https://www.tbntiling.com.au';
+const pageUrl = `${siteUrl}/privacy`;
+const pageTitle = 'Privacy Policy - How We Protect Your Personal Information';
+const pageDescription = 'Read our privacy policy to understand how TBN Tiling & Stone collects, uses, and protects your personal information. We are committed to maintaining your privacy and data security.';
+
+export const metadata: Metadata = {
+  title: pageTitle,
+  description: pageDescription,
+  keywords: [
+    'privacy policy',
+    'data protection',
+    'personal information',
+    'privacy rights',
+    'data security',
+    'information collection',
+    'GDPR compliance',
+    'privacy Australia',
+  ],
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    url: pageUrl,
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: pageUrl,
+  },
+};
 
 export default function PrivacyPage() {
   const sections = [
@@ -68,11 +103,18 @@ export default function PrivacyPage() {
   return (
     <main className="bg-[#fcfcf7]">
       <Navbar />
-      <LegalHero 
-        title="Privacy Policy"
-        description="Your privacy is important to us. Learn how we collect, use, and protect your personal information."
-      />
-      <LegalContent sections={sections} />
+      
+      <AnimatedSection animation="fade-up">
+        <LegalHero 
+          title="Privacy Policy"
+          description="Your privacy is important to us. Learn how we collect, use, and protect your personal information."
+        />
+      </AnimatedSection>
+      
+      <AnimatedSection animation="fade-up" delay={150}>
+        <LegalContent sections={sections} />
+      </AnimatedSection>
+      
       <Footer />
     </main>
   );

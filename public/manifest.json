@@ -1,0 +1,46 @@
+{
+  "name": "TBN Tiling & Stone",
+  "short_name": "TBN Tiling",
+  "description": "Professional tiling, stonework, and waterproofing services in Australia",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fcfcf7",
+  "theme_color": "#D4AF37",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": [
+    "business",
+    "home improvement",
+    "construction"
+  ],
+  "shortcuts": [
+    {
+      "name": "Our Services",
+      "url": "/services",
+      "description": "View our tiling and renovation services"
+    },
+    {
+      "name": "Contact Us",
+      "url": "/#contact",
+      "description": "Get in touch with us"
+    },
+    {
+      "name": "Gallery",
+      "url": "/gallery",
+      "description": "View our project gallery"
+    }
+  ]
+}

@@ -2,6 +2,42 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import LegalHero from '@/components/LegalHero';
 import LegalContent from '@/components/LegalContent';
+import { AnimatedSection } from '@/components';
+import type { Metadata } from 'next';
+
+const siteUrl = 'https://www.tbntiling.com.au';
+const pageUrl = `${siteUrl}/legal`;
+const pageTitle = 'Legal Information - Business Compliance & Consumer Rights';
+const pageDescription = 'Important legal information about TBN Tiling & Stone including business compliance, licensing, insurance, consumer rights under Australian law, and dispute resolution procedures.';
+
+export const metadata: Metadata = {
+  title: pageTitle,
+  description: pageDescription,
+  keywords: [
+    'legal information',
+    'business compliance',
+    'licensing',
+    'insurance',
+    'consumer rights',
+    'Australian Consumer Law',
+    'dispute resolution',
+    'building codes',
+    'professional standards',
+  ],
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    url: pageUrl,
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: pageUrl,
+  },
+};
 
 export default function LegalPage() {
   const sections = [
@@ -93,11 +129,18 @@ export default function LegalPage() {
   return (
     <main className="bg-[#fcfcf7]">
       <Navbar />
-      <LegalHero 
-        title="Legal Information"
-        description="Important legal information about our business operations and compliance."
-      />
-      <LegalContent sections={sections} />
+      
+      <AnimatedSection animation="fade-up">
+        <LegalHero 
+          title="Legal Information"
+          description="Important legal information about our business operations and compliance."
+        />
+      </AnimatedSection>
+      
+      <AnimatedSection animation="fade-up" delay={150}>
+        <LegalContent sections={sections} />
+      </AnimatedSection>
+      
       <Footer />
     </main>
   );

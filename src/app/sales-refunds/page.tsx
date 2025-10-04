@@ -2,6 +2,41 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import LegalHero from '@/components/LegalHero';
 import LegalContent from '@/components/LegalContent';
+import { AnimatedSection } from '@/components';
+import type { Metadata } from 'next';
+
+const siteUrl = 'https://www.tbntiling.com.au';
+const pageUrl = `${siteUrl}/sales-refunds`;
+const pageTitle = 'Sales & Refunds Policy - Payment Terms & Cancellation Guidelines';
+const pageDescription = 'Understand our sales and refunds policy including payment terms, cancellation guidelines, deposit requirements, and refund procedures for tiling and renovation services.';
+
+export const metadata: Metadata = {
+  title: pageTitle,
+  description: pageDescription,
+  keywords: [
+    'sales policy',
+    'refund policy',
+    'payment terms',
+    'cancellation policy',
+    'deposit requirements',
+    'refund procedures',
+    'payment methods',
+    'service quotes',
+  ],
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    url: pageUrl,
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: pageUrl,
+  },
+};
 
 export default function SalesRefundsPage() {
   const sections = [
@@ -83,11 +118,18 @@ export default function SalesRefundsPage() {
   return (
     <main className="bg-[#fcfcf7]">
       <Navbar />
-      <LegalHero 
-        title="Sales and Refunds Policy"
-        description="Understanding our policies on quotes, payments, cancellations, and refunds."
-      />
-      <LegalContent sections={sections} />
+      
+      <AnimatedSection animation="fade-up">
+        <LegalHero 
+          title="Sales and Refunds Policy"
+          description="Understanding our policies on quotes, payments, cancellations, and refunds."
+        />
+      </AnimatedSection>
+      
+      <AnimatedSection animation="fade-up" delay={150}>
+        <LegalContent sections={sections} />
+      </AnimatedSection>
+      
       <Footer />
     </main>
   );

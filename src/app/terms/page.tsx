@@ -2,6 +2,41 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import LegalHero from '@/components/LegalHero';
 import LegalContent from '@/components/LegalContent';
+import { AnimatedSection } from '@/components';
+import type { Metadata } from 'next';
+
+const siteUrl = 'https://www.tbntiling.com.au';
+const pageUrl = `${siteUrl}/terms`;
+const pageTitle = 'Terms of Use - Service Agreement & User Guidelines';
+const pageDescription = 'Read our terms of use to understand the conditions for using TBN Tiling & Stone services. Learn about our service agreements, warranties, and user responsibilities.';
+
+export const metadata: Metadata = {
+  title: pageTitle,
+  description: pageDescription,
+  keywords: [
+    'terms of use',
+    'service agreement',
+    'user guidelines',
+    'terms and conditions',
+    'service terms',
+    'warranties',
+    'legal terms',
+    'user responsibilities',
+  ],
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    url: pageUrl,
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: pageUrl,
+  },
+};
 
 export default function TermsPage() {
   const sections = [
@@ -75,11 +110,18 @@ export default function TermsPage() {
   return (
     <main className="bg-[#fcfcf7]">
       <Navbar />
-      <LegalHero 
-        title="Terms of Use"
-        description="Please read these terms carefully before using our services."
-      />
-      <LegalContent sections={sections} />
+      
+      <AnimatedSection animation="fade-up">
+        <LegalHero 
+          title="Terms of Use"
+          description="Please read these terms carefully before using our services."
+        />
+      </AnimatedSection>
+      
+      <AnimatedSection animation="fade-up" delay={150}>
+        <LegalContent sections={sections} />
+      </AnimatedSection>
+      
       <Footer />
     </main>
   );

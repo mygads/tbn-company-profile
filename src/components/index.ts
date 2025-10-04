@@ -13,3 +13,4 @@ export { default as GalleryHero } from './GalleryHero';
 export { default as GalleryGrid } from './GalleryGrid';
 export { default as LegalHero } from './LegalHero';
 export { default as LegalContent } from './LegalContent';
+export { default as AnimatedSection } from './AnimatedSection';
