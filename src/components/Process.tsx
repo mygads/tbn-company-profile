@@ -28,8 +28,8 @@ export default function Process() {
   ];
 
   return (
-    <section id="process" className="px-4 sm:px-8 container mx-auto py-8 lg:py-16">
-      <div className="">
+    <section id="process" className="px-6">
+      <div className="px-4 sm:px-8 container mx-auto py-8 lg:py-16">
         <div 
           className="relative rounded-[17px] shadow-[9px_11px_10.8px_0px_rgba(0,0,0,0.25)] px-6 sm:px-8 lg:px-[49px] py-6 lg:py-[43px]"
           style={{ 
@@ -40,10 +40,6 @@ export default function Process() {
           <div className="flex flex-col sm:flex-row gap-6 sm:gap-4 lg:gap-[82px] items-center justify-center w-full max-w-[1064px] mx-auto relative">
             {steps.map((step, index) => (
               <div key={index} className={`flex flex-col gap-2 lg:gap-[13px] items-center text-center text-black ${step.width} flex-shrink-0 relative`}>
-                {/* Mobile Vertical Line - show between steps except after last */}
-                {index < steps.length - 1 && (
-                  <div className="sm:hidden absolute top-full left-1/2 transform -translate-x-1/2 w-[2px] h-6 bg-[#d4a017]"></div>
-                )}
                 
                 {/* Step Title */}
                 <div className="font-bold text-sm lg:text-[16px] leading-tight lg:leading-[21px] w-full">
