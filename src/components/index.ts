@@ -11,3 +11,5 @@ export { default as Footer } from './Footer';
 export { default as PlaceholderImage } from './PlaceholderImage';
 export { default as GalleryHero } from './GalleryHero';
 export { default as GalleryGrid } from './GalleryGrid';
+export { default as LegalHero } from './LegalHero';
+export { default as LegalContent } from './LegalContent';
