@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function Waterproofing() {
   return (
-    <section className="bg-white py-12 md:py-20">
+    <section className=" py-12 md:py-20">
       <div className="container mx-auto px-10">
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16 mb-8 md:mb-12">
           {/* Left Content - Description */}

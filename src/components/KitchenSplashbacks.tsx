@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function KitchenSplashbacks() {
   return (
-    <section className="bg-[#fcfcf7] py-12 md:py-20">
+    <section className="py-12 md:py-20">
       <div className="container mx-auto px-10">
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16 mb-8 md:mb-12">
           {/* Left Content - Heading */}
@@ -43,7 +43,7 @@ export default function KitchenSplashbacks() {
               alt="Kitchen Splashback Design 1"
               width={556}
               height={276}
-              className="w-full h-auto object-cover rounded-lg md:rounded-xl shadow-lg"
+              className="w-full h-auto object-cover rounded-lg md:rounded-xl"
             />
           </div>
 
@@ -54,7 +54,7 @@ export default function KitchenSplashbacks() {
               alt="Kitchen Splashback Design 2"
               width={556}
               height={276}
-              className="w-full h-auto object-cover rounded-lg md:rounded-xl shadow-lg"
+              className="w-full h-auto object-cover rounded-lg md:rounded-xl"
             />
           </div>
         </div>
