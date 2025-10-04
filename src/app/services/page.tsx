@@ -10,7 +10,7 @@ import { Contact, Process } from '@/components'
 
 export default function ServicesPage() {
   return (
-    <main className='bg-white'>
+    <main className='bg-[#fcfcf7]'>
       <Navbar />
       <ServicesHero />
       <BathroomKitchenRenovations />
