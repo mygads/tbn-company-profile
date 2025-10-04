@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
-    "start": "next start"
+    "start": "next start",
+    "preview": "next build && next start",
+    "serve": "npx serve out"
   },
   "dependencies": {
     "next": "15.5.3",
@@ -22,3 +24,4 @@
     "typescript": "^5"
   }
 }
+
