@@ -1,59 +1,61 @@
-'use client'
+'use client';
 
-// Placeholder images for waterproofing service
-const waterproofingImage1 = "/api/placeholder/556/276"
-const waterproofingImage2 = "/api/placeholder/556/276"
+import Image from 'next/image';
 
 export default function Waterproofing() {
   return (
-    <section className="bg-white px-[134px] py-[85px] min-h-[593px] flex flex-col gap-[23px] items-start justify-center">
-      <div className="flex items-center gap-[88px] w-full max-w-[1177px] mx-auto">
-        {/* Left Content - Description */}
-        <div className="w-[526px] flex flex-col justify-center">
-          <p className="text-[24px] font-normal font-['DM_Sans'] leading-normal text-[#706c61]">
-            <span className="font-bold text-[#b96244]">Protect</span>
-            <span> your bathroom and kitchen with professional </span>
-            <span className="font-bold text-[#b96244]">waterproofing</span>
-            <span>. Our methods ensure long-term </span>
-            <span className="font-bold text-[#b96244]">durability</span>
-            <span> and </span>
-            <span className="font-bold text-[#b96244]">prevent</span>
-            <span> future </span>
-            <span className="font-bold text-[#b96244]">leaks</span>
-            <span>.</span>
-          </p>
+    <section className="bg-white py-12 md:py-20">
+      <div className="container mx-auto px-10">
+        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16 mb-8 md:mb-12">
+          {/* Left Content - Description */}
+          <div className="w-full lg:w-1/2 order-2 lg:order-1">
+            <p className="text-lg md:text-xl lg:text-2xl font-normal leading-relaxed text-[#706c61] text-center lg:text-left">
+              <span className="font-bold text-[#b96244]">Protect</span>
+              <span> your bathroom and kitchen with professional </span>
+              <span className="font-bold text-[#b96244]">waterproofing</span>
+              <span>. Our methods ensure long-term </span>
+              <span className="font-bold text-[#b96244]">durability</span>
+              <span> and </span>
+              <span className="font-bold text-[#b96244]">prevent</span>
+              <span> future </span>
+              <span className="font-bold text-[#b96244]">leaks</span>
+              <span>.</span>
+            </p>
+          </div>
+
+          {/* Right Content - Heading */}
+          <div className="w-full lg:w-1/2 text-center lg:text-right order-1 lg:order-2">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold font-league-spartan leading-tight text-[#222222]">
+              Waterproofing
+            </h2>
+          </div>
         </div>
 
-        {/* Right Content - Heading */}
-        <div className="w-[502px] flex flex-col justify-center text-right">
-          <h2 className="text-[64px] font-black font-['League_Spartan'] leading-normal text-[#222222]">
-            Waterproofing
-          </h2>
+        {/* Images Section */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 justify-items-center md:justify-items-stretch">
+          {/* Waterproofing Process Image */}
+          <div className="w-full max-w-md md:max-w-none">
+            <Image
+              src="/images/waterproofing1.png"
+              alt="Waterproofing Process"
+              width={556}
+              height={276}
+              className="w-full h-auto object-cover rounded-lg md:rounded-xl"
+            />
+          </div>
+
+          {/* Waterproofing Tool Image */}
+          <div className="w-full max-w-md md:max-w-none">
+            <Image
+              src="/images/waterproofing2.png"
+              alt="Waterproofing Application"
+              width={556}
+              height={276}
+              className="w-full h-auto object-cover rounded-lg md:rounded-xl"
+            />
+          </div>
         </div>
-      </div>
-
-      {/* Images Section */}
-      <div className="flex gap-[65px] items-center w-full max-w-[1177px] mx-auto">
-        {/* Waterproofing Process Image */}
-        <div 
-          className="w-[556px] h-[276px] bg-cover bg-no-repeat rounded-lg shadow-[-9px_11px_10.8px_0px_rgba(0,0,0,0.25)]"
-          style={{ 
-            backgroundImage: `url('${waterproofingImage1}')`,
-            backgroundPosition: '70.38% 34.73%',
-            backgroundSize: '125.72% 252.9%'
-          }}
-        />
-
-        {/* Waterproofing Tool Image */}
-        <div 
-          className="w-[556px] h-[276px] bg-cover bg-no-repeat rounded-lg shadow-[-9px_11px_10.8px_0px_rgba(0,0,0,0.25)]"
-          style={{ 
-            backgroundImage: `url('${waterproofingImage2}')`,
-            backgroundPosition: '9.87% 92.79%',
-            backgroundSize: '134.17% 171.97%'
-          }}
-        />
       </div>
     </section>
-  )
+  );
 }
