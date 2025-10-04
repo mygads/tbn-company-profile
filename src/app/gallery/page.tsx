@@ -73,13 +73,10 @@ export default function GalleryPage() {
     <main className="bg-[#fcfcf7]">
       <Navbar />
       
-      <AnimatedSection animation="fade-up">
         <GalleryHero />
-      </AnimatedSection>
       
-      <AnimatedSection animation="zoom-in" delay={150}>
         <GalleryGrid />
-      </AnimatedSection>
+
       
       <AnimatedSection animation="fade-up" delay={100}>
         <Contact />
