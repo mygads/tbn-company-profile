@@ -9,3 +9,5 @@ export { default as FAQ } from './FAQ';
 export { default as Contact } from './Contact';
 export { default as Footer } from './Footer';
 export { default as PlaceholderImage } from './PlaceholderImage';
+export { default as GalleryHero } from './GalleryHero';
+export { default as GalleryGrid } from './GalleryGrid';

@@ -164,7 +164,7 @@ export default function Footer() {
             <Link href="/legal" className="hover:text-[#d4a017] transition-colors">
               Legal
             </Link>
-            <Link href="/sitemap" className="hover:text-[#d4a017] transition-colors">
+            <Link href="https://www.google.com/maps?q=Australia+Zoo" target="_blank" rel="noopener noreferrer" className="hover:text-[#d4a017] transition-colors">
               Site Map
             </Link>
           </div>
