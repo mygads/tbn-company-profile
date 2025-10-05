@@ -25,7 +25,7 @@ export default function ServicesHero() {
           
           {/* CTA Button */}
           <button 
-            onClick={() => window.open('https://wa.me/1234567890?text=Hello%20TBN%20Tiling,%20I%20need%20your%20services', '_blank')}
+            onClick={() => window.open('https://wa.me/61424296793?text=Hello%20TBN%20Tiling,%20I%20need%20your%20services', '_blank')}
             className="group inline-flex items-center gap-4 rounded-full border-3 border-[#f2bd3a] bg-white px-7 py-2 md:py-3 font-semibold text-[#2f271c] shadow-[0_16px_32px_rgba(242,189,58,0.25)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_44px_rgba(242,189,58,0.35)]"
           >
             <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#f2bd3a] text-[#2f271c] transition group-hover:bg-[#e1a92c]">

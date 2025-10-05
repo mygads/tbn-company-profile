@@ -96,7 +96,7 @@ export default function PrivacyPage() {
     },
     {
       title: "Contact Us",
-      content: "If you have any questions about this Privacy Policy, please contact us at tbntiling2009@gmail.com or call us at 0424 296 793."
+      content: "If you have any questions about this Privacy Policy, please contact us at tbntiling2009@gmail.com or call us at +61424296793."
     }
   ];
 

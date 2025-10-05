@@ -49,7 +49,7 @@ export default function Footer() {
           <div className="lg:col-span-3">
             <div className="w-full max-w-[209px] h-[210px] overflow-hidden">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.1332666142016!2d152.9605380763101!3d-26.83571328999266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b9384b3394378fb%3A0x912d04a1146aed33!2sAustralia%20Zoo!5e0!3m2!1sid!2sid!4v1759069137586!5m2!1sid!2sid" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1427.6242844015032!2d115.83968090831623!3d-32.24964934132321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2a329aae1e215213%3A0x21798cbe680a543a!2s31%20Chieftain%20St%2C%20Bertram%20WA%206167%2C%20Australia!5e1!3m2!1sid!2sid!4v1759648823883!5m2!1sid!2sid" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 
@@ -82,10 +82,10 @@ export default function Footer() {
                 Call us
               </h4>
               <Link 
-                href="tel:0424296793"
+                href="tel:+61424296793"
                 className="text-sm md:text-base text-white hover:text-[#d4a017] transition-colors"
               >
-                0424 296 793
+                +61424296793
               </Link>
             </div>
           </div>
@@ -135,11 +135,11 @@ export default function Footer() {
                   About Us
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/faqs" className="hover:text-[#d4a017] transition-colors">
                   FAQs
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href="/contact" className="hover:text-[#d4a017] transition-colors">
                   Contact Us
@@ -164,7 +164,7 @@ export default function Footer() {
             <Link href="/legal" className="hover:text-[#d4a017] transition-colors">
               Legal
             </Link>
-            <Link href="https://www.google.com/maps?q=Australia+Zoo" target="_blank" rel="noopener noreferrer" className="hover:text-[#d4a017] transition-colors">
+            <Link href="https://maps.app.goo.gl/SH6FsrBmD7vrN1MG6" target="_blank" rel="noopener noreferrer" className="hover:text-[#d4a017] transition-colors">
               Site Map
             </Link>
           </div>

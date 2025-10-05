@@ -47,7 +47,7 @@ export default function LegalPage() {
         "TBN Tiling & Stone is a professional tiling and stonework company operating in Australia. We are committed to operating our business in compliance with all applicable laws and regulations.",
         "Business Name: TBN Tiling & Stone",
         "Email: tbntiling2009@gmail.com",
-        "Phone: 0424 296 793"
+        "Phone: +61424296793"
       ]
     },
     {
@@ -122,7 +122,7 @@ export default function LegalPage() {
     },
     {
       title: "Contact for Legal Matters",
-      content: "For legal inquiries or to report concerns about compliance, please contact us at tbntiling2009@gmail.com or call 0424 296 793."
+      content: "For legal inquiries or to report concerns about compliance, please contact us at tbntiling2009@gmail.com or call +61424296793."
     }
   ];
 

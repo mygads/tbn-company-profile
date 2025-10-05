@@ -95,7 +95,7 @@ export default function FAQ({ bg = false }: FAQProps) {
             
             {/* Phone Number */}
             <p className="text-sm md:text-base text-[#706c61] text-center lg:text-left">
-              Call or message us at <span className="font-bold text-[#25D366]">0424 296 793</span>
+              Call or message us at <span className="font-bold text-[#25D366]">+61424296793</span>
             </p>
           </div>
 

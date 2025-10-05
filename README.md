@@ -196,7 +196,7 @@ To add analytics, integrate in `src/app/layout.tsx`:
 
 This is a private company website. For inquiries, contact:
 - Email: tbntiling2009@gmail.com
-- Phone: 0424 296 793
+- Phone: +61424296793
 
 ## 📄 License
 
@@ -226,7 +226,7 @@ pnpm dev
 For technical support or questions:
 - Website: https://www.tbntiling.com.au
 - Email: tbntiling2009@gmail.com
-- Phone: 0424 296 793
+- Phone: +61424296793
 
 ---
 

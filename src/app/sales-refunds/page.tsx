@@ -111,7 +111,7 @@ export default function SalesRefundsPage() {
     },
     {
       title: "Contact Us",
-      content: "For questions about our sales and refunds policy, or to discuss a specific situation, please contact us at tbntiling2009@gmail.com or call 0424 296 793."
+      content: "For questions about our sales and refunds policy, or to discuss a specific situation, please contact us at tbntiling2009@gmail.com or call +61424296793."
     }
   ];
 

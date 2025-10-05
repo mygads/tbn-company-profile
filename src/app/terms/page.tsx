@@ -103,7 +103,7 @@ export default function TermsPage() {
     },
     {
       title: "Contact Information",
-      content: "For questions about these Terms of Use, please contact us at tbntiling2009@gmail.com or call 0424 296 793."
+      content: "For questions about these Terms of Use, please contact us at tbntiling2009@gmail.com or call +61424296793."
     }
   ];
 

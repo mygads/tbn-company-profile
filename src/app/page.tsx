@@ -119,7 +119,7 @@ export const metadata: Metadata = {
   },
   other: {
     'contact:email': 'tbntiling2009@gmail.com',
-    'contact:phone': '0424 296 793',
+    'contact:phone': '+61424296793',
     'business:contact_data:street_address': 'Australia',
     'business:contact_data:locality': 'Australia',
     'business:contact_data:country_name': 'Australia',
